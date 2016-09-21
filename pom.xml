@@ -141,17 +141,17 @@
             <extension>
                 <groupId>org.apache.maven.wagon</groupId>
                 <artifactId>wagon-ftp</artifactId>
-                <version>${version.org.apache.maven.wagon}</version>
+                <version>2.2</version>
             </extension>
             <extension>
                 <groupId>org.apache.maven.wagon</groupId>
                 <artifactId>wagon-ssh-external</artifactId>
-                <version>${version.org.apache.maven.wagon}</version>
+                <version>2.2</version>
             </extension>
             <extension>
                 <groupId>org.kuali.maven.wagons</groupId>
                 <artifactId>maven-s3-wagon</artifactId>
-                <version>${version.org.kuali.maven.wagons}</version>
+                <version>1.1.19</version>
             </extension>
         </extensions>
         <plugins>
