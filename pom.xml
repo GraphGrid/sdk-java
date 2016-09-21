@@ -39,6 +39,23 @@
             <email>developer@authorize.net</email>
         </developer>
     </developers>
+    <profiles>
+        <profile>
+            <id>release</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>graphgrid-s3-snapshots</id>
+                    <name>GraphGrid Snapshot Repository</name>
+                    <url>${maven.repository.s3.snapshots}</url>
+                </snapshotRepository>
+                <repository>
+                    <id>graphgrid-s3-releases</id>
+                    <name>GraphGrid Release Repository</name>
+                    <url>${maven.repository.s3.releases}</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
     <dependencies>
 
         <!-- ch.qos.logback -->
@@ -120,6 +137,23 @@
         <maven.compile.deprecation>true</maven.compile.deprecation>
     </properties>
     <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>${version.org.apache.maven.wagon}</version>
+            </extension>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh-external</artifactId>
+                <version>${version.org.apache.maven.wagon}</version>
+            </extension>
+            <extension>
+                <groupId>org.kuali.maven.wagons</groupId>
+                <artifactId>maven-s3-wagon</artifactId>
+                <version>${version.org.kuali.maven.wagons}</version>
+            </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
