@@ -4,15 +4,9 @@
     <parent>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>Angel.SR4</version>
+        <version>Camden.SR3</version>
         <relativePath/>
     </parent>
-    <!--parent>
-        <groupId>com.graphgrid.boot</groupId>
-        <artifactId>graphgrid-boot-aws-parent</artifactId>
-        <version>1.0.8.BUILD-SNAPSHOT</version>
-        <relativePath>../graphgrid-boot-aws-build/graphgrid-boot-aws-parent</relativePath>
-    </parent-->
     <groupId>net.authorize</groupId>
     <artifactId>anet-java-sdk</artifactId>
     <packaging>jar</packaging>
